@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Comentarios
 
-# Register your models here.
+class ComentariosAdmin(admin.ModelAdmin):
+    list_display = ('usuario', 'comentarios', 'data', 'aprovado')
+
+
+admin.site.register(Comentarios, ComentariosAdmin)

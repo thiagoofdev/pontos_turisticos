@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from enderecos.api.viewsets import EnderecoViewSet
+from comentarios.api.viewsets import ComentarioViewSet
 
 router = routers.DefaultRouter()
 router.register(r'enderecos', EnderecoViewSet, basename='Endereco')
+router.register(r'comentarios', ComentarioViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
