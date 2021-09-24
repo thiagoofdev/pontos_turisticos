@@ -4,13 +4,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
 from atracoes.api.viewsets import AtracaoViewSet
-from enderecos.api.viewsets import EnderecoViewSet
 from comentarios.api.viewsets import ComentarioViewSet
+from avaliacoes.api.viewsets import AvaliacaoViewSet
+from enderecos.api.viewsets import EnderecoViewSet
 
 router = routers.DefaultRouter()
 router.register(r'enderecos', EnderecoViewSet, basename='Endereco')
 router.register(r'atracoes', AtracaoViewSet)
 router.register(r'comentarios', ComentarioViewSet)
+router.register(r'avaliacoes', AvaliacaoViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

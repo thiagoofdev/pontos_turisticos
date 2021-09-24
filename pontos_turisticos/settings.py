@@ -29,8 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 # DEBUG = config('DEBUG', default=True, cast=bool)
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['api-pontos-tur.herokuapp.com']
+ALLOWED_HOSTS = ['api-pontos-tur.herokuapp.com', 'localhost:8000']
 
 
 # Application definition
